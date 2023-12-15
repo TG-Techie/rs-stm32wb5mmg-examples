@@ -1,25 +1,24 @@
 [target.thumbv7em-none-eabihf]
-# runner = 'probe-run --chip STM32WB5MMG'
-runner = ["function stm32_programmer --connect port=usb1 --write"]
 
 rustflags = [
-    # `flip-link` moves stack at the end of flash
-    #"-C", "linker=flip-link",
+    # ---------------- required ----------------
     "-C",
     "link-arg=-Tlink.x",
-    # "-C",
-    # "link-arg=-Tdefmt.x",
 
-    # This is needed if your flash or ram addresses are not aligned to 0x10000 in memory.x
-    # See https://github.com/rust-embedded/cortex-m-quickstart/pull/95
+    # # ---------------- this example is not using the defmt crate, do this is commented out ----------------
+    # # "-C",
+    # # "link-arg=-Tdefmt.x",
+
+    # # ---------------- unused ----------------
+    # # `flip-link` moves stack at the end of flash
+    # # "-C", "linker=flip-link",
+
+    # ---------------- The STM32WB5MMG aligns to 0x8000000 ----------------
+    # enabling `--nmagic` is needed for the build to use the MEMORY.x section defined by the stm32wb-hal crate
+    # Without this, (as fo writing) the start of flash defaults to 0x10000, See https://github.com/rust-embedded/cortex-m-quickstart/pull/95
     "-C",
     "link-arg=--nmagic",
 ]
 
 [build]
 target = "thumbv7em-none-eabihf" # Cortex-M4F and Cortex-M7F (with FPU)
-
-# [profile.debug]
-# lto = true
-
-# # [profile.release]

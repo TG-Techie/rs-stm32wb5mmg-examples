@@ -228,7 +228,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e2a38df5b15c8d5c7e8654189744d8e396bddc18ad48041a500ce52d6948941f"
 
 [[package]]
-name = "rust-stm32wb5mmg-attempt-v2"
+name = "rs-stm32wb5mmg-examples"
 version = "0.1.0"
 dependencies = [
  "cortex-m 0.6.7",

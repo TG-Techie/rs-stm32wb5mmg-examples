@@ -1,24 +1,22 @@
 [package]
-name = "rust-stm32wb5mmg-attempt-v2"
+name = "rs-stm32wb5mmg-examples"
 version = "0.1.0"
 edition = "2021"
-# forced-target = "thumbv7em-none-eabihf" # unstable, may add later 
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+# See more Cargo.toml keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies.stm32wb-hal]
+version = "0.1.14"
+features = ["xG-package"]
 
 [dependencies.cortex-m]
 version = "0.6.3"
-
 
 [dependencies.cortex-m-rt]
 version = "0.6.13"
 
 [dependencies.panic-halt]
 version = "0.2.0"
-
-[dependencies.stm32wb-hal]
-version = "0.1.14"
-features = ["xG-package"]
 
 
 [profile.release]
