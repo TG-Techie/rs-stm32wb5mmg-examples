@@ -51,7 +51,7 @@ PLATFORM_STMPROG_DEFAULT_BIN_PATHS = {
 }
 
 # see if the default path for the stm32_programmer_cli binary has been added for this platform
-if sys.platform in PLATFORM_STMPROG_DEFAULT_BIN_PATHS:
+if PLATFORM_STMPROG_DEFAULT_BIN_PATHS.get(sys.platform) is not None:
     STM32_PROGRAMMER_CLI: Final = PLATFORM_STMPROG_DEFAULT_BIN_PATHS[sys.platform]
 else:
     raise NotImplementedError(
