@@ -1,6 +1,6 @@
 # RS-STM32WB5MMG-Examples
 
-This repo aims to provide a basic template/proof of viability for developing on (STM32WB5MMG)[https://www.st.com/en/product/stm32wb5mmg] based boards using Rust.
+This repo aims to provide a basic template/proof of viability for developing on [STM32WB5MMG](https://www.st.com/en/product/stm32wb5mmg) based boards using Rust.
 
 ## Setup
 Run the following to install the rust toolchain for the target architecture:
@@ -27,7 +27,7 @@ Helpful info and some differences in this repo from plain rust
 - The `.cargo/config.toml` file is used to specify the target architecture and linker scripts necessary for the STM32WB5MMG, it *may* (?) require enableing other linker scripts depending on what crates you depend on
 - The target architecture for the STM32WB5MMG is `thumbv7em-none-eabihf` which is a Cortex-M4F with hardware floating point support.
 - The `STM32WB-hal` crate is what provides a lot of the support, the appropriate MEMORY.x file, several linker scripts, etc that enable rust for this device. (thank you (@eupn)[https://github.com/eupn])
-- This repo was initially tested on (sparkfun's MicroMod STM32WB5MMG Processor)[https://learn.sparkfun.com/tutorials/micromod-stm32wb5mmg-hookup-guide/introduction] board (thus the use of `pa2` as the default LED blink pin).
+- This repo was initially tested on [sparkfun's MicroMod STM32WB5MMG Processor](https://learn.sparkfun.com/tutorials/micromod-stm32wb5mmg-hookup-guide/introduction) board (thus the use of `pa2` as the default LED blink pin).
 
 
 ## Notes Maintaining this repo
@@ -43,7 +43,7 @@ Helpful info and some differences in this repo from plain rust
 
 
 ## Copyright / Licensing
-This repo is availbe under the (MIT license)[https://opensource.org/license/mit/], please see the LICENSE.MD file for more information.
+This repo is availbe under the [MIT license](https://opensource.org/license/mit/), please see the LICENSE.MD file for more information.
 
 
 ## Not Yet Tested / Todos
