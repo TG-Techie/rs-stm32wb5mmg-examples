@@ -26,7 +26,7 @@ With USB plugged into your stm32wb5mmg board:
 Helpful info and some differences in this repo from plain rust
 - The `.cargo/config.toml` file is used to specify the target architecture and linker scripts necessary for the STM32WB5MMG, it *may* (?) require enableing other linker scripts depending on what crates you depend on
 - The target architecture for the STM32WB5MMG is `thumbv7em-none-eabihf` which is a Cortex-M4F with hardware floating point support.
-- The `STM32WB-hal` crate is what provides a lot of the support, the appropriate MEMORY.x file, several linker scripts, etc that enable rust for this device. (thank you (@eupn)[https://github.com/eupn])
+- The `STM32WB-hal` crate is what provides a lot of the support, the appropriate MEMORY.x file, several linker scripts, etc that enable rust for this device. (thank you [@eupn](https://github.com/eupn))
 - This repo was initially tested on [sparkfun's MicroMod STM32WB5MMG Processor](https://learn.sparkfun.com/tutorials/micromod-stm32wb5mmg-hookup-guide/introduction) board (thus the use of `pa2` as the default LED blink pin).
 
 
@@ -50,6 +50,6 @@ This repo is availbe under the [MIT license](https://opensource.org/license/mit/
 - [ ] Setup the mcu to run at a higher (more "normal") clock speed
 - [ ] Test this repo's with a jlink or st-link brand programmer/debugger
 - [ ] Make this a workspace to...
-  - [ ] use (xtask)[https://github.com/matklad/cargo-xtask] to replace the `dfu-upload.py` script with a rust implementation (b/c rust 😊), ideally using a rust-based dfu upload tool.
+  - [ ] use [xtask](https://github.com/matklad/cargo-xtask) to replace the `dfu-upload.py` script with a rust implementation (b/c rust 😊), ideally using a rust-based dfu upload tool.
   - [ ] Add examples for bluetooth
   - [ ] Add examples for USB
